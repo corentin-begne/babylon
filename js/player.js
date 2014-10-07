@@ -72,7 +72,7 @@ Player.prototype.init = function(){
 		object._loaded = true;
 		object.skeleton = skeletons[0];
 		object.mesh = meshes[0];	
-		object.mesh.position.y = 3;
+		object.mesh.position = new BABYLON.Vector3(-2, 0, 2);
 	//	object.mesh.ellipsoid = new BABYLON.Vector3(1, 1, 1);	
 	//	object.mesh.setEnabled(false);
 		object.basicAnimation('mini');
