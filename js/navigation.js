@@ -78,8 +78,8 @@ Navigation.prototype.checkMove = function(){
 		var fixY = 1.5 ;
 		if(x < 0)
 			fixY = -1.5;
-		this.player.mesh.rotation.y = Math.atan(y/x)+fixY-worldManager.camera.alpha+1.5;
-	//	this.player.mesh.rotationQuaternion = BABYLON.Quaternion.RotationYawPitchRoll(Math.atan(y/x)+fixY-worldManager.camera.alpha+1.5, 0, 0);
+	//	this.player.mesh.rotation.y = Math.atan(y/x)+fixY-worldManager.camera.alpha+1.5;
+		this.player.mesh.rotationQuaternion = BABYLON.Quaternion.RotationYawPitchRoll(Math.atan(y/x)+fixY-worldManager.camera.alpha+1.5, 0, 0);
 		passMove = true;
 	}	
 	if(passMove)
