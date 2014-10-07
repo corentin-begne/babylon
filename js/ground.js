@@ -4,7 +4,7 @@ var Ground = function(){
 	this.mesh;
 }
 Ground.prototype.init = function(){
-	this.mesh = BABYLON.Mesh.CreateBox(this.name, this.size, worldManager.scene._self, false);	
+	this.mesh = BABYLON.Mesh.CreateGround(this.name, this.size,this.size,1, worldManager.scene._self, false);	
 	/*this.mesh.material = new BABYLON.StandardMaterial(this.name+"Material", worldManager.scene._self);
 	this.mesh.material.backFaceCulling = false;
 	this.mesh.material.diffuseColor = new BABYLON.Color3(1, 1, 1);*/

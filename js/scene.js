@@ -11,7 +11,7 @@ Scene.prototype.init = function(){
 	var object = this;
 	this.engine = new BABYLON.Engine(worldManager.canvas, true);
 	this._self = new BABYLON.Scene(this.engine);
-	this._self.enablePhysics();
+	this._self.enablePhysics(null, new BABYLON.OimoJSPlugin());
 	this._self.setGravity(new BABYLON.Vector3(0,-10,0));
 	this._self.collisionsEnabled = true;
 	worldManager.camera = new BABYLON.ArcRotateCamera("camera",1,0.8,10, new BABYLON.Vector3.Zero(), this._self);
@@ -21,7 +21,7 @@ Scene.prototype.init = function(){
 	this.player = new Player();
 	this.player.init();
 	this.navigation = new Navigation();	
-	//this.box.spawn();
+	this.box.spawn();
 	this._self.registerBeforeRender(function () {
 		if(object.player._loaded)
 		{
